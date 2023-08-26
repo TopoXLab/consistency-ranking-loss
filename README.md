@@ -29,23 +29,31 @@ python train_and_eval.py --save_folder [Results saving folder] --gpus [GPU ID] -
 Using conda:
 
 cd ISIC2017code/
+
 conda env create -f consistency_test.yml
 
 or
 
 conda env create -f consistency.yml
+
 pip install segmentation-models-pytorch==0.3.0
+
 pip install scikit-image==0.19.2
 
 ### 2. Training data for ISIC2017 ###
 
 move downloaded ISIC2017 dataset into [data_folder]
+
 create [save_folder]
+
 cd ISIC2017code/
+
 python -W ignore ours_official.py --save_folder [save_folder] --gpus 2 --label_size 250 --con_weight 0.15 --data_folder [data_folder]
 
 ### 2. Evaluate for ISIC2017 ###
+
 under folder ISIC2017code/
+
 python eval_official.py --save_folder [save_folder] --gpus 2 --data_folder [data_folder] --file_name model_best.pth
 
 ### Citation ###
