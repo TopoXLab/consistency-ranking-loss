@@ -22,6 +22,23 @@ Run command:
 
 python train_and_eval.py --save_folder [Results saving folder] --gpus [GPU ID] --label_size [labeled samples size (2500, 5000, 10000)]
 
+## ISIC2017 dataset ##
+
+### 1. Environment setup ###
+
+Using conda:
+
+cd ISIC2017code/
+conda env create -f consistency_test.yml
+
+or
+
+conda env create -f consistency.yml
+pip install segmentation-models-pytorch==0.2.1
+pip install scikit-image==0.19.2
+
+
+
 ### Citation ###
     @inproceedings{li2022confidence,
     author      =  {Li, Chen and Hu, Xiaoling and Chen, Chao},
